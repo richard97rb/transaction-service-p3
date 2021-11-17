@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  transaction-service:
+    image: transaction-service
+    restart: always
+    container_name: transaction-service
+    ports:
+      - '8083:8083'
+    networks:
+      - 'config-network'
+networks:
+  config-network:
+    external: true
